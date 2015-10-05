@@ -13,10 +13,10 @@ namespace ChallengeRunner
          init();
       }
 
-      protected static string[] input;
-      protected static string[] expectedOutput;
+      protected static string input;
+      protected static string expectedOutput;
 
-      public bool passed => AllOutput.SequenceEqual(expectedOutput);
+      public bool passed => string.Join("\r\n", AllOutput) == expectedOutput;
 
       public abstract void run();
       protected abstract void init();

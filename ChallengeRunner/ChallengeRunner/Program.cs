@@ -13,10 +13,10 @@ namespace ChallengeRunner
    {
       static void Main(string[] args)
       {
-         ChallengeBase c = mostRecentChallenge();
-         c.run();
-         Console.WriteLine(c.passed? "Challenge Passed" : "Challenge Failed");
-         Console.ReadLine();
+         ChallengeBase c = mostRecentChallenge();//Get the most recent challenge file
+         c.run();//run the challenge
+         Console.WriteLine(c.passed? "Challenge Passed" : "Challenge Failed");//Output weather or not the challenge was passed.
+         Console.ReadLine();//Pause
       }
 
       private static ChallengeBase mostRecentChallenge()
@@ -42,7 +42,7 @@ namespace ChallengeRunner
          {
             return (ChallengeBase) Activator.CreateInstance(mostRecentChallenge);
          }
-         throw new Exception("Could not find a challenge to run");
+         throw new Exception("Could not find a challenge to run.");
       }
    }
 }
