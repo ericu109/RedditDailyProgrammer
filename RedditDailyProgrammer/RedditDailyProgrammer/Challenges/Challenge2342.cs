@@ -30,7 +30,7 @@ namespace ChallengeRunner.Challenges
                {
                   if (!wordList.Any(m => m.StartsWith(inputWord.Substring(0, i))))
                   {
-                     Output(string.Format($"{inputWord.Substring(0, i)}<{inputWord.Substring(i, inputWord.Length-i)}"));
+                     Output(string.Format($"{inputWord.Substring(0, i)}<{inputWord.Substring(i)}"));
                      break;
                   }
                }
