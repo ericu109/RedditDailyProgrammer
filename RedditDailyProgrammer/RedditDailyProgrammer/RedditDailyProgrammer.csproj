@@ -44,8 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChallengeBase.cs" />
-    <Compile Include="Challenges\Challenge234.cs" />
-    <Compile Include="Challenges\Challenge235.cs" />
+    <Compile Include="Challenges\Challenge2342.cs" />
+    <Compile Include="Challenges\Challenge2351.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

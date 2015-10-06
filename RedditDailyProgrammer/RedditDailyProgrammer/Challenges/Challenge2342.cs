@@ -8,7 +8,7 @@ using RedditDailyProgrammer;
 
 namespace ChallengeRunner.Challenges
 {
-   class Challenge234 : ChallengeBase
+   class Challenge2342 : ChallengeBase
    {
       public override void run()
       {
