@@ -7,30 +7,13 @@ namespace RedditDailyProgrammer.Challenges
    /// <summary>
    /// https://www.reddit.com/r/dailyprogrammer/comments/3nkanm/20151005_challenge_235_easy_ruthaaron_pairs/
    /// </summary>
-   class Challenge235 : ChallengeBase
+   class Challenge2351 : ChallengeBase
    {
-      protected override void init()
+      public override void Run()
       {
-         input = string.Join(Environment.NewLine,
-            "4",
-            "(5, 6)",
-            "(2107, 2108)",
-            "(492, 493)",
-            "(128, 129)");
-
-
-         expectedOutput =
-            string.Join(Environment.NewLine,
-            "(5,6) VALID",
-            "(2107,2108) VALID",
-            "(492,493) VALID",
-            "(128,129) NOT VALID");
-      }
-
-      public override void run()
-      {
-         input
+         Input
             .Split(new [] {"\r\n"}, StringSplitOptions.None)//sprint the string into each of it's lines
+            .Select(m => m.Trim())
             .Skip(1)//skip the first input base it's the number of pairs we're inputing.  This will work for any number of pairs
             .Select(m => new Tuple<int, int>(Convert.ToInt32(m.Trim('(', ')').Split(',')[0]), Convert.ToInt32(m.Trim('(', ')').Split(',')[1])))//Parse the line into a tuple of two numbers
             .ToList()

@@ -10,11 +10,11 @@ namespace ChallengeRunner.Challenges
 {
    class Challenge2342 : ChallengeBase
    {
-      public override void run()
+      public override void Run()
       {
          var wordList = File.ReadAllLines("ContentFiles/enable1.txt");
 
-         var inputWords = input
+         var inputWords = Input
                            .Split(new[] {"\r\n"}, StringSplitOptions.None)
                            .ToList();
 
@@ -36,43 +36,6 @@ namespace ChallengeRunner.Challenges
                }
             }
          }
-      }
-
-      protected override void init()
-      {
-         input = string.Join(Environment.NewLine,
-            "accomodate",
-            "acknowlegement",
-            "arguemint",
-            "comitmment",
-            "deductabel",
-            "depindant",
-            "existanse",
-            "forworde",
-            "herrass",
-            "inadvartent",
-            "judgemant",
-            "ocurrance",
-            "parogative",
-            "suparseed"
-            );
-
-         expectedOutput = string.Join(Environment.NewLine,
-            "accomo<date",
-            "acknowleg<ement",
-            "arguem<int",
-            "comitm<ment",
-            "deducta<bel",
-            "depin<dant",
-            "exista<nse",
-            "forword<e",
-            "herra<ss",
-            "inadva<rtent",
-            "judgema<nt",
-            "ocur<rance",
-            "parog<ative",
-            "supa<rseed"
-            );
       }
    }
 }
