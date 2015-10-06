@@ -5,10 +5,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using ChallengeRunner.Challenges;
+using RedditDailyProgrammer.Challenges;
 
 
-namespace ChallengeRunner
+namespace RedditDailyProgrammer
 {
    class Program
    {
