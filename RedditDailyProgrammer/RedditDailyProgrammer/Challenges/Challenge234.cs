@@ -17,6 +17,7 @@ namespace ChallengeRunner.Challenges
          var inputWords = input
                            .Split(new[] {"\r\n"}, StringSplitOptions.None)
                            .ToList();
+
          foreach (var inputWord in inputWords)
          {
             if (wordList.Contains(inputWord))
@@ -25,11 +26,9 @@ namespace ChallengeRunner.Challenges
             }
             else
             {
-               var result = true;
-               for (int i = 0; i < inputWord.Length; i++)
+               for (var i = 0; i < inputWord.Length; i++)
                {
-                  result = wordList.Any(m => m.StartsWith(inputWord.Substring(0, i)));
-                  if (!result)
+                  if (!wordList.Any(m => m.StartsWith(inputWord.Substring(0, i))))
                   {
                      Output(string.Format($"{inputWord.Substring(0, i)}<{inputWord.Substring(i, inputWord.Length-i)}"));
                      break;
