@@ -46,6 +46,8 @@
     <Compile Include="ChallengeBase.cs" />
     <Compile Include="Challenges\Challenge2342.cs" />
     <Compile Include="Challenges\Challenge2351.cs" />
+    <Compile Include="Challenges\Challenge2352.cs" />
+    <Compile Include="Challenges\Challenge2391.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,10 +58,16 @@
     <Content Include="ContentFiles\enable1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="InputAndExpectedOutput\Challenge2391.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="InputAndExpectedOutput\Challenge2342.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="InputAndExpectedOutput\Challenge2351.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputAndExpectedOutput\Challenge2352.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

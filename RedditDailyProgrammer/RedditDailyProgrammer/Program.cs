@@ -16,7 +16,7 @@ namespace RedditDailyProgrammer
       {
          try
          {
-            ChallengeBase challengeToExecute = getChallenge("Challenge2342");
+            ChallengeBase challengeToExecute = getChallenge();
             challengeToExecute.Run(); //run the challenge
             Console.WriteLine(challengeToExecute.Passed ? "Challenge Passed" : "Challenge Failed");//Output weather or not the challenge was passed.
          }
