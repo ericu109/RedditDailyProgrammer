@@ -18,7 +18,11 @@ namespace RedditDailyProgrammer
          {
             ChallengeBase challengeToExecute = getChallenge();
             challengeToExecute.Run(); //run the challenge
-            Console.WriteLine(challengeToExecute.Passed ? "Challenge Passed" : "Challenge Failed");//Output weather or not the challenge was passed.
+            if (ChallengeBase.ExpectedOutput != "Not Defined")
+            {
+               Console.WriteLine(challengeToExecute.Passed ? "Challenge Passed" : "Challenge Failed");
+                  //Output weather or not the challenge was passed.
+            }
          }
          catch (Exception e)
          {

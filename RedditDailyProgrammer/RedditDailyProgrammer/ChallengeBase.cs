@@ -10,7 +10,7 @@ namespace RedditDailyProgrammer
    public abstract class ChallengeBase
    {
       protected static string Input;
-      protected static string ExpectedOutput;
+      public static string ExpectedOutput;
       public bool Passed => string.Join("\r\n", AllOutput) == ExpectedOutput;
       protected List<string> AllOutput = new List<string>();
 
