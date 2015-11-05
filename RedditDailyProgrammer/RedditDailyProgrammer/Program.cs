@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Reflection;
@@ -17,12 +18,28 @@ namespace RedditDailyProgrammer
          try
          {
             ChallengeBase challengeToExecute = getChallenge();
+            DateTime startTime;
+            DateTime stopTime;
+
+            startTime = DateTime.Now;
             challengeToExecute.Run(); //run the challenge
-            if (ChallengeBase.ExpectedOutput != "Not Defined")
+            stopTime = DateTime.Now;
+            if (challengeToExecute.ExpectingResult)
             {
                Console.WriteLine(challengeToExecute.Passed ? "Challenge Passed" : "Challenge Failed");
-                  //Output weather or not the challenge was passed.
             }
+            else
+            {
+               Console.WriteLine("Not expecting any particular result.");
+            }
+
+            //Output some stats:
+            Console.WriteLine($"{Environment.NewLine}Here are some stats!");
+            Console.WriteLine($"Start Time      : {startTime}");
+            Console.WriteLine($"Stop Time       : {stopTime}");
+            Console.WriteLine($"Run Duration    : {(stopTime - startTime).ToString(@"mm\:ss\.fff")}");
+            Console.WriteLine($"Peak Memory     : {Process.GetCurrentProcess().PeakWorkingSet64/1024f/1024f}MB");
+            Console.WriteLine($"Total CPU Time  : {Process.GetCurrentProcess().TotalProcessorTime.ToString(@"mm\:ss\.fff")}");
          }
          catch (Exception e)
          {

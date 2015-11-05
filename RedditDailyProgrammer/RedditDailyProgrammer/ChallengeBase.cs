@@ -12,6 +12,7 @@ namespace RedditDailyProgrammer
       protected static string Input;
       public static string ExpectedOutput;
       public bool Passed => string.Join("\r\n", AllOutput) == ExpectedOutput;
+      public bool ExpectingResult => ExpectedOutput != "Not Defined";
       protected List<string> AllOutput = new List<string>();
 
       protected ChallengeBase()
