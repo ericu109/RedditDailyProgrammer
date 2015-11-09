@@ -26,10 +26,12 @@ namespace RedditDailyProgrammer
             stopTime = DateTime.Now;
             if (challengeToExecute.ExpectingResult)
             {
+               Console.WriteLine();
                Console.WriteLine(challengeToExecute.Passed ? "Challenge Passed" : "Challenge Failed");
             }
             else
             {
+               Console.WriteLine();
                Console.WriteLine("Not expecting any particular result.");
             }
 
